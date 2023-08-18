@@ -1,0 +1,21 @@
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1024px;
+  margin: auto;
+  padding-bottom: 5rem;
+  padding-top: 5vh;
+}
+
+.courses__header {
+  font-family: var(--font-main);
+  padding: 0 0 3rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.courses__header span {
+  font-family: var(--font-accent);
+}

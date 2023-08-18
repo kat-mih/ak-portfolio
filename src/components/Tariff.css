@@ -1,0 +1,46 @@
+.tariff {
+  min-width: 300px;
+  padding: 1rem;
+  transition: all 0.5s;
+}
+
+.tariff:hover {
+  transform: scale(1.05);
+}
+
+.tariff__header {
+  background: url("../assets/tariff.jpeg");
+  background-size: cover;
+  background-position: 50% 40%;
+  color: #fff;
+  padding: 2.5rem 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.tariff__body {
+  display: flex;
+  flex-direction: column;
+  max-height: 350px;
+  padding: 1rem;
+  background-color: #fff;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.tariff__body-btn {
+  margin: 2rem 0 1rem 0;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .tariff__body {
+    height: 350px;
+  }
+}

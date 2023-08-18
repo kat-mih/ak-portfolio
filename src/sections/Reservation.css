@@ -1,0 +1,17 @@
+.reservation {
+  min-height: 100vh;
+  padding-top: 5vh;
+}
+
+.reservation__header {
+  font-family: var(--font-accent);
+  padding: 0 0 1.5rem 0;
+  margin: 0;
+  text-align: center;
+}
+
+.reservation__body {
+  height: 500px;
+  text-align: center;
+  background: lightgray;
+}

@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "liberation";
+  src: url("./assets/fonts/LiberationMono-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ekaterina";
+  src: url("./assets/fonts/ekaterina_velikaya_one-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/ekaterina_velikaya_one-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-primary: #fdf7ef;
+  --color-secondary: #a68e74;
+  --color-accent: #9d3636;
+  --color-headings: #3e554b;
+  --color-text: #1d3027;
+  --font-main: "liberation";
+  --font-accent: "ekaterina";
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  h1 {
+    font-size: 6.5rem;
+  }
+}

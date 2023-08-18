@@ -1,0 +1,47 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+
+.message {
+  margin: auto;
+  max-width: 600px;
+  width: 90%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+.message__btn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  border: none;
+  overflow: none;
+  background: transparent;
+}
+
+.message__btn img {
+  width: 100%;
+}
+
+.message__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 3rem 0;
+  padding: 1rem 2rem;
+  font-family: var(--font-main);
+  letter-spacing: 3px;
+  line-height: 2.5rem;
+}
