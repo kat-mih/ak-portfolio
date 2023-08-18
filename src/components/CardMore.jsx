@@ -7,10 +7,44 @@ import Tariff from "./Tariff";
 
 const CardMore = ({ open }) => {
   const modules = [
-    {},
-    {},
-    {},
-  ]
+    {
+      name: "Машинки для ПМ, їх особливості",
+      result: "Вміння правильно підбирати апарат для себе",
+      additional: "Гайд про голки",
+    },
+    {
+      name: "Пігментологія та колористика",
+      result: "Правильно підібраний колір пігменту під типаж клієнта",
+      additional: `Чек-лист "Улюблені мікси пігментів"`,
+    },
+    {
+      name: "Ескіз",
+      result: "Чистий і правильно побудований ескіз за 15 хвилин",
+      additional: "Гайд про інструменти, які використовую при побудові ескіза",
+    },
+    {
+      name: "Правильний штрих",
+      result: "Правильне вкладання пігменту",
+    },
+    {
+      name: "Типи шкіри і як з ними працювати",
+      result: "Максимальне приживлення пігменту на будь-якому типі шкіри",
+    },
+    {
+      name: "Анестезія та протипоказання",
+      result: "Правильно підібрана анестезіяи",
+      additional: "Презентація про види анестезії",
+    },
+    {
+      name: "Підготовка робочого місця та інструментів. Стерилізація та дезінфекція",
+      result: "Основні правила безпеки майстра",
+    },
+    {
+      name: "Демонстрація роботи на моделі",
+      result:
+        "Розуміння робочого процесу від А до Я з наглядним кінцевим результатом",
+    },
+  ];
 
   const tarrifs = [
     {
@@ -33,110 +67,28 @@ const CardMore = ({ open }) => {
   return (
     <>
       <ul className="card-more__content">
-        {modules.map(module => <li className="card-more__content-item">
-          {module.name}
-          <ul>
-            <li className="card-more__content-item__resultat">
-              {module.resultat}
-            </li>
-          </ul>
-          {if module.additional}
-          <div>Додаткові матеріал:</div>
-          <ul>
-            <li className="card-more__content-item__additional">
-              {module.additional}
-            </li>
-          </ul>
-        </li>)}
-        <li className="card-more__content-item">
-          Машинки для ПМ, їх особливості
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Вміння правильно підбирати апарат для себе
-            </li>
-          </ul>
-          <div>Додаткові матеріал:</div>
-          <ul>
-            <li className="card-more__content-item__additional">
-              Гайд про голки
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Пігментологія та колористика
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Правильно підібраний колір пігменту під типаж клієнта
-            </li>
-          </ul>
-          <div>Додаткові матеріал:</div>
-          <ul>
-            <li className="card-more__content-item__additional">
-              Чек-лист "Улюблені мікси пігментів"
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Ескіз
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Чистий і правильно побудований ескіз за 15 хвилин
-            </li>
-          </ul>
-          <div>Додаткові матеріал:</div>
-          <ul>
-            <li className="card-more__content-item__additional">
-              Гайд про інструменти, які використовую при побудові ескіза
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Правильний штрих
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Правильне вкладання пігменту
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Типи шкіри і як з ними працювати
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Максимальне приживлення пігменту на будь-якому типі шкіри
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Анестезія та протипоказання
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Правильно підібрана анестезія
-            </li>
-          </ul>
-          <div>Додаткові матеріал:</div>
-          <ul>
-            <li className="card-more__content-item__additional">
-              Презентація про види анестезії
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Підготовка робочого місця та інструментів. Стерилізація та дезінфекція
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Основні правила безпеки майстра
-            </li>
-          </ul>
-        </li>
-        <li className="card-more__content-item">
-          Демонстрація роботи на моделі
-          <ul>
-            <li className="card-more__content-item__resultat">
-              Розуміння робочого процесу від А до Я з наглядним кінцевим
-              результатом
-            </li>
-          </ul>
-        </li>
+        {modules.map((module) => (
+          <li key={module.name} className="card-more__content-item">
+            {module.name}
+            <ul>
+              <li className="card-more__content-item__resultat">
+                {module.result}
+              </li>
+            </ul>
+            {module.additional ? (
+              <>
+                <div>Додаткові матеріал:</div>
+                <ul>
+                  <li className="card-more__content-item__additional">
+                    {module.additional}
+                  </li>
+                </ul>
+              </>
+            ) : (
+              ""
+            )}
+          </li>
+        ))}
       </ul>
       <div className="tariffs">
         {tarrifs.map((tarif) => (
