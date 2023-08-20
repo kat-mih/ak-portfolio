@@ -7,16 +7,17 @@
   display: none;
 }
 
+.hero__right {
+  position: relative;
+  overflow: hidden;
+}
+
 .hero__right img {
-  width: 100%;
+  width: 100vw;
   height: 95vh;
   max-height: 95vh;
   object-fit: cover;
   object-position: 50% 35%;
-}
-
-.hero__right {
-  position: relative;
 }
 
 .hero__right-header {
@@ -28,6 +29,12 @@
   margin: 0;
   padding: 0;
   color: #fff;
+  z-index: 20;
+}
+
+.hero__swiper {
+  width: 100vw;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 400px) {
@@ -71,6 +78,14 @@
     width: 70%;
     max-height: 70%;
     object-fit: contain;
+  }
+
+  .hero__right {
+    width: 50vw;
+  }
+
+  .hero__right img {
+    width: 50vw;
   }
 
   .hero__right-header {
