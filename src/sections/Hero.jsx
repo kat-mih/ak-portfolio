@@ -27,6 +27,7 @@ const Hero = () => {
           effect={"fade"}
           lazy={true}
           loop={true}
+          speed={400}
           autoplay={{
             delay: 4000,
             disableOnInteraction: false,
