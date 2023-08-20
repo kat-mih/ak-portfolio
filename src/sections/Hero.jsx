@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./Hero.css";
 import "swiper/css";
+// import "swiper/css/lazy";
 import "swiper/css/effect-fade";
 
 import { Autoplay, EffectFade } from "swiper/modules";
@@ -24,16 +25,17 @@ const Hero = () => {
         {/* <img src={right} alt="" /> */}
         <Swiper
           effect={"fade"}
+          lazy={true}
           loop={true}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           modules={[EffectFade, Autoplay]}
           className="hero__swiper">
           {heroRightImages.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} />
+              <img loading="lazy" src={image} />
             </SwiperSlide>
           ))}
         </Swiper>
