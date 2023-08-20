@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .contact-form__item:first-child {

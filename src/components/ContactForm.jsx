@@ -56,12 +56,12 @@ const ContactForm = () => {
           placeholder="Введи своє повідомлення тут..."
           rows={5}
         />
-        <input
+        <button
           className="contact-form__btn"
           type="submit"
-          value="Відправити"
-          onClick={() => setOpenMessage(true)}
-        />
+          onClick={() => setOpenMessage(true)}>
+          Відправити
+        </button>
       </form>
       <SuccesMessage
         open={openMessage}
