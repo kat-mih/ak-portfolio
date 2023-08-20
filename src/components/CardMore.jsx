@@ -92,11 +92,8 @@ const CardMore = ({ open }) => {
       </ul>
       <div className="tariffs">
         {tarrifs.map((tarif) => (
-          <Tariff name={tarif.name} content={tarif.content} />
+          <Tariff key={tarif.name} name={tarif.name} content={tarif.content} />
         ))}
-        {/* <Tariff name={one.name} content={one.content} />
-        <Tariff name={second.name} content={second.content} />
-        <Tariff name={third.name} content={third.content} /> */}
       </div>
     </>
   );

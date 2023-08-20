@@ -12,15 +12,21 @@ ul {
 }
 
 .card-more__content-item::marker {
-  content: "📌 ";
+  content: "\01F4CC ";
 }
 
 .card-more__content-item__resultat::marker {
-  content: "➖ ";
+  content: "\02796 ";
 }
 
 .card-more__content-item__additional::marker {
-  content: "⭐️ ";
+  content: "\02B50 \0FE0F";
+}
+
+.card-more__content-item,
+.card-more__content-item__additional,
+.card-more__content-item__resultat {
+  padding-left: 0.5rem;
 }
 
 .tariffs {
