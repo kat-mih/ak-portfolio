@@ -47,6 +47,10 @@ h2 {
   padding-bottom: 2rem;
 }
 
+button {
+  color: #000;
+}
+
 @media screen and (min-width: 400px) {
   h1 {
     font-size: 4rem;
