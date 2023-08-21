@@ -42,6 +42,7 @@ const Hero = () => {
         <Swiper
           effect={"fade"}
           loop={true}
+          lazy={true}
           speed={400}
           autoplay={{
             delay: 4000,
@@ -51,7 +52,7 @@ const Hero = () => {
           className="hero__swiper">
           {heroRightImages.map((image, index) => (
             <SwiperSlide key={index}>
-              <img src={image} />
+              <img src={image} loading="lazy" />
             </SwiperSlide>
           ))}
         </Swiper>
