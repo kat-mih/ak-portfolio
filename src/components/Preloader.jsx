@@ -70,7 +70,7 @@ const Preloader = () => {
       {/* <img src={loader} alt="" /> */}
       <div className="loader-text-wrapper block">
         <h1 className="loader-text">
-          {"AK-soon".split("").map((letter, index) => (
+          {"АННА".split("").map((letter, index) => (
             <span key={index} className="letter">
               {letter}
             </span>
