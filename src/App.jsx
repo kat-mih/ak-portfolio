@@ -8,9 +8,7 @@ import {
   Gallery,
 } from "./sections";
 import Navbar from "./components/Navbar";
-
-import "./App.css";
-import loader from "./assets/loader.gif";
+import Preloader from "./components/Preloader";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -20,7 +18,7 @@ const App = () => {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 4700);
     };
 
     if (document.readyState === "complete") {
@@ -35,9 +33,7 @@ const App = () => {
   return (
     <>
       {loading ? (
-        <div className="loader-container">
-          <img src={loader} alt="" />
-        </div>
+        <Preloader />
       ) : (
         <div>
           <Navbar />

@@ -1,10 +1,24 @@
-import React, { useRef } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import gsap from "gsap";
+
 import "./Navbar.css";
+
 import booksy from "../assets/booksy.png";
 
 const Navbar = () => {
   const navRef = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".navbar__item", 1, {
+        y: "-100%",
+        ease: "power3.inOut",
+      });
+    }, navRef);
+
+    return () => ctx.revert();
+  }, []);
 
   const showNav = () => {
     navRef.current.classList.toggle("responsive_nav");

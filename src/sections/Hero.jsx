@@ -1,6 +1,6 @@
-import React from "react";
-import Navbar from "../components/Navbar.jsx";
+import React, { useLayoutEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import gsap from "gsap";
 
 import "./Hero.css";
 import "swiper/css";
@@ -14,9 +14,26 @@ import { one, two, three, four } from "../assets/hero";
 
 const Hero = () => {
   const heroRightImages = [one, two, three, four];
+  const heroSec = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(".hero__swiper", 2, {
+        right: "100%",
+        ease: "power3.inOut",
+      });
+
+      gsap.from(".hero__left", 1, {
+        opacity: 0,
+        ease: "power3.inOut",
+      });
+    }, heroSec);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="hero">
+    <div ref={heroSec} className="hero">
       <div className="hero__left">
         <img src={left} alt="" />
         <p>б'юті-експерт|естетика|PMU</p>
