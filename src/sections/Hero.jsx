@@ -22,10 +22,8 @@ const Hero = () => {
         <p>б'юті-експерт|естетика|PMU</p>
       </div>
       <div className="hero__right">
-        {/* <img src={right} alt="" /> */}
         <Swiper
           effect={"fade"}
-          lazy={true}
           loop={true}
           speed={400}
           autoplay={{
@@ -36,7 +34,7 @@ const Hero = () => {
           className="hero__swiper">
           {heroRightImages.map((image, index) => (
             <SwiperSlide key={index}>
-              <img loading="lazy" src={image} />
+              <img src={image} />
             </SwiperSlide>
           ))}
         </Swiper>

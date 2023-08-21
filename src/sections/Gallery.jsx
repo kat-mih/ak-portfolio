@@ -52,8 +52,8 @@ const Gallery = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper">
-        {images.map((image) => (
-          <SwiperSlide>
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
             <img className="gallery__image" src={image} alt="pmu" />
           </SwiperSlide>
         ))}
