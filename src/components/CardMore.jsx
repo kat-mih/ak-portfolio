@@ -1,8 +1,6 @@
 import React from "react";
 import "./CardMore.css";
 
-import star from "../assets/star.png";
-import circle from "../assets/circle.png";
 import Tariff from "./Tariff";
 
 const CardMore = ({ open }) => {

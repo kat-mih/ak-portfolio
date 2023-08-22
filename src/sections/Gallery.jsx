@@ -26,9 +26,9 @@ const Gallery = () => {
     lips2,
   ];
   return (
-    <div id="gallery">
+    <div className="gallery" id="gallery">
       <Swiper
-        slidesPerView={1}
+        slidesPerView="auto"
         spaceBetween={0}
         breakpoints={{
           640: {
@@ -41,8 +41,9 @@ const Gallery = () => {
           },
         }}
         centeredSlides={true}
+        speed={2000}
         autoplay={{
-          delay: 2500,
+          delay: 1,
           disableOnInteraction: false,
         }}
         pagination={{
