@@ -9,11 +9,11 @@ import "swiper/css/effect-fade";
 
 import { Autoplay, EffectFade } from "swiper/modules";
 
-import left from "../assets/main_left.jpeg";
-import { one, two, three, four } from "../assets/hero";
+import left from "../assets/main_left_2.jpeg";
+import { one, two, three, four, five } from "../assets/hero";
 
 const Hero = () => {
-  const heroRightImages = [one, two, three, four];
+  const heroRightImages = [five, one, four, two];
   const heroSec = useRef();
 
   useLayoutEffect(() => {
@@ -36,7 +36,7 @@ const Hero = () => {
     <div ref={heroSec} className="hero">
       <div className="hero__left">
         <img src={left} alt="" />
-        <p>б'юті-експерт|естетика|PMU</p>
+        <p>б'юті-експерт | естетика | PMU</p>
       </div>
       <div className="hero__right">
         <Swiper
@@ -56,7 +56,9 @@ const Hero = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <p className="hero__right-header">Aнна Kапiтaнюк</p>
+        <p className="hero__right-header">
+          Aня <br /> Kапiтaнюк
+        </p>
       </div>
     </div>
   );

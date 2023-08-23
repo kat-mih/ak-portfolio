@@ -24,10 +24,10 @@
   position: absolute;
   top: 35%;
   left: 0;
-  font-family: var(--font-main);
-  font-size: 3rem;
+  font-family: var(--font-hero);
+  font-size: 4rem;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 0.5rem;
   color: #fff;
   z-index: 20;
 }
@@ -68,8 +68,9 @@
     align-items: center;
     font-family: var(--font-main);
     color: var(--color-text);
-    font-size: 1rem;
-    letter-spacing: 4px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+
     height: 95vh;
     max-height: 95vh;
   }
@@ -89,6 +90,9 @@
   }
 
   .hero__right-header {
-    font-size: 6.5rem;
+    /* margin-top: 10rem; */
+    font-size: 7rem;
+    line-height: 7.5rem;
+    letter-spacing: -7px;
   }
 }
