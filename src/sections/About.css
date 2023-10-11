@@ -26,6 +26,11 @@
   line-height: 1.8rem;
 }
 
+.about__content-text span {
+  display: contents;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
   .about {
     margin: 3rem 5rem;

@@ -5,6 +5,7 @@
   letter-spacing: 3px;
   max-width: 1024px;
   transition: all 0.5s;
+  margin-bottom: 1.5rem;
 }
 
 .card__header {
@@ -43,7 +44,7 @@
 
 @media screen and (min-width: 768px) {
   .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 
   .card__body {
