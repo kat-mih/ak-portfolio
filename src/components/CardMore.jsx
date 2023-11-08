@@ -3,96 +3,113 @@ import "./CardMore.css";
 
 import Tariff from "./Tariff";
 
-const CardMore = ({ open }) => {
-  const modules = [
-    {
-      name: "Машинки для ПМ, їх особливості",
-      result: "Вміння правильно підбирати апарат для себе",
-      additional: "Гайд про голки",
-    },
-    {
-      name: "Пігментологія та колористика",
-      result: "Правильно підібраний колір пігменту під типаж клієнта",
-      additional: `Чек-лист "Улюблені мікси пігментів"`,
-    },
-    {
-      name: "Ескіз",
-      result: "Чистий і правильно побудований ескіз за 15 хвилин",
-      additional: "Гайд про інструменти, які використовую при побудові ескіза",
-    },
-    {
-      name: "Правильний штрих",
-      result: "Правильне вкладання пігменту",
-    },
-    {
-      name: "Типи шкіри і як з ними працювати",
-      result: "Максимальне приживлення пігменту на будь-якому типі шкіри",
-    },
-    {
-      name: "Анестезія та протипоказання",
-      result: "Правильно підібрана анестезіяи",
-      additional: "Презентація про види анестезії",
-    },
-    {
-      name: "Підготовка робочого місця та інструментів. Стерилізація та дезінфекція",
-      result: "Основні правила безпеки майстра",
-    },
-    {
-      name: "Демонстрація роботи на моделі",
-      result:
-        "Розуміння робочого процесу від А до Я з наглядним кінцевим результатом",
-    },
-  ];
-
-  const tarrifs = [
-    {
-      name: "Пакет 1",
-      content: "8 уроків в записі з доступом до перегляду на 2 місяці",
-    },
-    {
-      name: "Пакет 2",
-      content:
-        "8 уроків в записі з доступом до перегляду на 2 місяці + відпрацювання онлайн з викладачем-експертом (1 модель)",
-    },
-    {
-      name: "Пакет 3",
-      content:
-        "8 уроків в записі з доступом до перегляду на 2 місяці + відпрацювання офлайн з експертом у Варшаві (2 моделі - 1 день)",
-    },
-  ];
-
+const CardMore = ({ open, program }) => {
   if (!open) return null;
   return (
     <>
-      <ul className="card-more__content">
-        {modules.map((module) => (
-          <li key={module.name} className="card-more__content-item">
-            {module.name}
-            <ul>
-              <li className="card-more__content-item__resultat">
-                {module.result}
-              </li>
-            </ul>
-            {module.additional ? (
-              <>
-                <div>Додаткові матеріал:</div>
-                <ul>
-                  <li className="card-more__content-item__additional">
-                    {module.additional}
-                  </li>
+      <div className="card-more">
+        {program.online ? (
+          <>
+            <div className="card-more__content">
+              <p className="card-more__content-header">Онлайн-підготовка:</p>
+              <p className="card-more__online-description">
+                {program.online.description}
+              </p>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
+        {program.offline ? (
+          <>
+            <div className="card-more__content">
+              <p className="card-more__offline">{program.offline.name}</p>
+
+              <div>
+                <p className="card-more__content-header">Програма курсу:</p>
+                <ul className="card-more__offline-program">
+                  {program.offline.program.map((item, index) => (
+                    <li
+                      className="card-more__offline-program__item"
+                      key={index}>
+                      {item}
+                    </li>
+                  ))}
                 </ul>
-              </>
-            ) : (
-              ""
-            )}
-          </li>
-        ))}
-      </ul>
-      <div className="tariffs">
+              </div>
+
+              <div>
+                <ul className="card-more__offline-schedule">
+                  {program.offline.schedule.map((day, index) => (
+                    <li
+                      className="card-more__offline-schedule__item"
+                      key={index}>
+                      <span>{index + 1} день</span>
+                      {day}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="card-more__content-header">Формат курсу:</p>
+                <ul>
+                  {program.offline.formats.map((format, index) => (
+                    <li className="card-more__offline-format__item" key={index}>
+                      {format}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  {program.offline.add.map((item, index) => (
+                    <li
+                      className="card-more__offline-additional__item"
+                      key={index}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="card-more__content-header">Бонуси:</p>
+                <ul>
+                  {program.offline.bonuses.map((bonus, index) => (
+                    <li className="card-more__offline-bonus__item" key={index}>
+                      {bonus}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
+        {program.additional ? (
+          <>
+            <div className="card-more__content">
+              <p className="card-more__additional">
+                {program.additional.description}
+              </p>
+              <p className="card-more__additional">
+                {program.additional.schedule}
+              </p>
+            </div>
+          </>
+        ) : (
+          ""
+        )}
+      </div>
+
+      {/* <div className="tariffs">
         {tarrifs.map((tarif) => (
           <Tariff key={tarif.name} name={tarif.name} content={tarif.content} />
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

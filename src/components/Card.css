@@ -24,6 +24,10 @@
   flex-direction: column;
 }
 
+.card__body-description {
+  font-weight: bold;
+}
+
 .card__body span {
   padding-top: 1rem;
   font-style: italic;

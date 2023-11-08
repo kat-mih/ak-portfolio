@@ -1,43 +1,54 @@
+p {
+  margin-top: 0;
+}
+
 ul {
-  padding-left: 30px;
+  padding-left: 1.5rem;
+  margin-top: 0.25rem;
 }
 
-.card-more__content-item {
-  padding-top: 1.5rem;
-  line-height: 1.5rem;
+.card-more {
+  margin-top: 2rem;
 }
 
-.card-more__content-item div {
-  padding-top: 0.5rem;
+.card-more__content-header {
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-.card-more__content-item::marker {
-  content: "\01F4CC ";
-}
-
-.card-more__content-item__resultat::marker {
-  content: "\02796 ";
-}
-
-.card-more__content-item__additional::marker {
-  content: "\02B50 \0FE0F";
-}
-
-.card-more__content-item,
-.card-more__content-item__additional,
-.card-more__content-item__resultat {
+.card-more__online-description {
   padding-left: 0.5rem;
 }
 
-.tariffs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.card-more__offline {
+  font-weight: bold;
 }
 
-@media screen and (min-width: 1000px) {
-  .tariffs {
-    flex-direction: row;
-  }
+/* OFFLINE PROGRAM */
+.card-more__offline-program__item::marker {
+  content: "✔️";
+}
+
+/* OFFLINE SCHEDULE */
+.card-more__offline-schedule {
+  list-style: none;
+}
+
+.card-more__offline-schedule__item span {
+  font-weight: bold;
+}
+
+/* OFFLINE FORMAT */
+.card-more__offline-format__item::marker {
+  content: "⭐️";
+}
+
+/* OFFLINE ADDITIONAL */
+.card-more__offline-additional__item::marker {
+  content: "✅";
+}
+
+/* OFFLINE BONUSES */
+.card-more__offline-bonus__item::marker {
+  content: "❤️";
 }

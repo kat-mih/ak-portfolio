@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CardMore from "./CardMore";
 import "./Card.css";
 
-const Card = ({ name, description }) => {
+const Card = ({ name, description, program }) => {
   const [openMore, setOpenMore] = useState(false);
 
   return (
@@ -10,8 +10,8 @@ const Card = ({ name, description }) => {
       <div className="card">
         <header className="card__header">{name}</header>
         <div className="card__body">
-          {description}
-          <CardMore open={openMore} />
+          <div className="card__body-description">{description}</div>
+          <CardMore program={program} open={openMore} />
           <button
             className="card__body-btn"
             onClick={() => setOpenMore(!openMore)}>
