@@ -1,5 +1,6 @@
 import Card from "../components/Card";
 import "./Courses.css";
+import Fade from "react-reveal/Fade";
 
 const Courses = () => {
   const coursesInfo = [
@@ -101,17 +102,21 @@ const Courses = () => {
 
   return (
     <div id="courses" className="courses">
-      <h2 className="courses__header">
-        Hавчайся <span>у</span> мене
-      </h2>
+      <Fade left>
+        <h2 className="courses__header">
+          Hавчайся <span>у</span> мене
+        </h2>
+      </Fade>
       <div className="courses__cards">
         {coursesInfo.map((course) => (
-          <Card
-            key={course.name}
-            name={course.name}
-            description={course.description}
-            program={course.program}
-          />
+          <Fade bottom key={course.name}>
+            <Card
+              key={course.name}
+              name={course.name}
+              description={course.description}
+              program={course.program}
+            />
+          </Fade>
         ))}
       </div>
     </div>

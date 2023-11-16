@@ -3,8 +3,7 @@ import "./CardMore.css";
 
 import Tariff from "./Tariff";
 
-const CardMore = ({ open, program }) => {
-  if (!open) return null;
+const CardMore = ({ program }) => {
   return (
     <>
       <div className="card-more">
