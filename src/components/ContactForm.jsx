@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import SuccesMessage from "./SuccesMessage";
 import "./ContactForm.css";
+import Fade from "react-reveal/Fade";
 
 const ContactForm = () => {
   const form = useRef();
@@ -31,38 +32,40 @@ const ContactForm = () => {
 
   return (
     <>
-      <form className="contact-form" ref={form} onSubmit={sendEmail}>
-        <input
-          className="contact-form__item"
-          type="text"
-          name="user_name"
-          placeholder="Iм'я"
-        />
-        <input
-          className="contact-form__item"
-          type="email"
-          name="user_email"
-          placeholder="Email"
-        />
-        <input
-          className="contact-form__item"
-          type="phone"
-          name="user_phone"
-          placeholder="Телефон"
-        />
-        <textarea
-          className="contact-form__item"
-          name="message"
-          placeholder="Введи своє повідомлення тут..."
-          rows={5}
-        />
-        <button
-          className="contact-form__btn"
-          type="submit"
-          onClick={() => setOpenMessage(true)}>
-          Відправити
-        </button>
-      </form>
+      <Fade right>
+        <form className="contact-form" ref={form} onSubmit={sendEmail}>
+          <input
+            className="contact-form__item"
+            type="text"
+            name="user_name"
+            placeholder="Iм'я"
+          />
+          <input
+            className="contact-form__item"
+            type="email"
+            name="user_email"
+            placeholder="Email"
+          />
+          <input
+            className="contact-form__item"
+            type="phone"
+            name="user_phone"
+            placeholder="Телефон"
+          />
+          <textarea
+            className="contact-form__item"
+            name="message"
+            placeholder="Введи своє повідомлення тут..."
+            rows={5}
+          />
+          <button
+            className="contact-form__btn"
+            type="submit"
+            onClick={() => setOpenMessage(true)}>
+            Відправити
+          </button>
+        </form>
+      </Fade>
       <SuccesMessage
         open={openMessage}
         onClose={() => {

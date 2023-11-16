@@ -12,9 +12,7 @@ const Contact = () => {
     <div id="contact" className="contact">
       <div className="contact__content">
         <div className="contact__content-side"></div>
-        <Fade right>
-          <ContactForm />
-        </Fade>
+        <ContactForm />
       </div>
       <Fade bottom cascade>
         <div className="contact__social">
