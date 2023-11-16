@@ -13,7 +13,7 @@
   padding: 0;
   rotate: -90deg;
   text-wrap: nowrap;
-  min-height: 300px;
+  min-width: 320px;
 }
 
 .about__header span {
