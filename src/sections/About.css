@@ -13,6 +13,7 @@
   padding: 0;
   rotate: -90deg;
   text-wrap: nowrap;
+  min-height: 300px;
 }
 
 .about__header span {
@@ -64,6 +65,7 @@
     z-index: 44;
     line-height: 5rem;
     rotate: 0deg;
+    min-height: auto;
   }
 
   .about__content {
